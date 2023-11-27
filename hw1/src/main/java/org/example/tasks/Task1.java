@@ -1,4 +1,4 @@
-package org.example.task1;
+package org.example.tasks;
 
 import java.util.*;
 import java.util.stream.Collectors;
