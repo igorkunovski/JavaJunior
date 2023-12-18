@@ -1,18 +1,29 @@
 package org.example;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class Book{
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    @Column(name = "name")
     private String name;
+    @Column(name = "author")
     private String author;
+    @Column(name = "issued")
     private int year;
+    @Column(name = "price")
     private int price;
 
     public Book() {
     }
 
-    public Book(int id, String name, String author, int year, int price) {
-        this.id = id;
+    public Book(String name, String author, int year, int price) {
+
         this.name = name;
         this.author = author;
         this.year = year;

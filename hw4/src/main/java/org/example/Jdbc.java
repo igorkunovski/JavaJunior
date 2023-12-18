@@ -3,7 +3,7 @@ package org.example;
 import java.sql.*;
 
 
-public class Main {
+public class Jdbc {
     public static void main(String[] args) throws SQLException {
 
         Connection connection = DriverManager.getConnection("jdbc:h2:mem:database");

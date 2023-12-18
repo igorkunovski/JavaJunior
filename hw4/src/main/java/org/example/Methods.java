@@ -11,7 +11,9 @@ public class Methods {
 
         try( Statement statement = connection.createStatement()) {
 
-            ResultSet result = statement.executeQuery("select id, name, author, issued, price from book where author = " + "'" + auth.toUpperCase() + "'" );
+            ResultSet result = statement.executeQuery(
+                    "select id, name, author, issued, price from book where author = " + "'" + auth.toUpperCase() + "'"
+            );
 
             int counter = 1;
 
@@ -33,7 +35,8 @@ public class Methods {
 
         try( Statement statement = connection.createStatement()) {
 
-            ResultSet result = statement.executeQuery("select id, name, author, issued, price from book");
+            ResultSet result = statement.executeQuery(
+                    "select id, name, author, issued, price from book");
 
             int counter = 1;
 
@@ -55,7 +58,6 @@ public class Methods {
         try (Statement statement = connection.createStatement()) {
 
             statement.executeUpdate("""
-                    
                     insert into book(id, name, author, issued, price)
                     values
                         (1, 'Война и мир', 'ТОЛСТОЙ', 1965, 1000),
